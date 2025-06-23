@@ -214,18 +214,21 @@
 
 % author names and affiliations
 % use a multiple column layout for up to three different affiliations
-\author{Abdelhakim Amer, Mohit Mehindratta, Yury Brodskiy and Erdal Kayacan
+\author{Abdelhakim Amer, Mohit Mehindratta, Yury Brodskiy, Bilal Wehbe and Erdal Kayacan
 %\author{
 % <-this % stops a space
 \thanks{A. Amer is with the Artificial Intelligence in Robotics Laboratory (AiR Lab), Department of Electrical and Computer Engineering, Aarhus University, 8000 Aarhus C, Denmark {\tt\small \{abdelhakim\} at ece.au.dk}.    Mohit Mehndiratta is with GIM Robotics, Espoo, Finland, {\tt\small \{mohit.mehndiratta\} at gimrobotics.fi}.
      Y. Brodskiy is with EIVA a/s, 8660 Skanderborg, Denmark. {\tt\small \{ybr\} at eiva.com.}
+     B.Wehbe is with Deutsches Forschungszentrum für Künstliche Intelligenz GmbH (DFKI), Bremen, Germany.  {\tt\small \{bilal.wehbe\} at dfki.de}.
     E. Kayacan is with the Automatic Control Group, Department of Electrical Engineering and Information Technology, Paderborn University, Paderborn, Germany. {\tt\small \{erdal.kayacan\} at uni-paderborn.de}.}%
 }
 
 \maketitle
 \begin{abstract}
+Inspection of complex underwater structures with tethered underwater vehicles is often hindered by the risk of tether entanglement. We propose REACT (real-time entanglement-aware coverage path planning for tethered underwater vehicles), a framework designed to overcome this limitation. REACT comprises a fast geometry-based tether model using the signed distance field (SDF) map for accurate, real-time simulation of taut tether configurations around arbitrary structures in 3D. This model enables an efficient online replanning strategy, enforcing a maximum tether length constraint, thereby actively preventing entanglement. By integrating REACT into a coverage path planning framework, we achieve safe and optimal inspection paths, previously challenging due to tether constraints. What is more, the underlying model predictive controller (MPC) renders optimal trajectory following while accounting for system dynamics. The complete REACT framework's efficacy is validated in a pipe inspection scenario, demonstrating safe, entanglement-free navigation and full-coverage inspection. Simulation results show REACT achieves 99.91\% coverage while maintaining tether constraints, compared to conventional planners that violate length limits. Real-world experiments confirm these benefits, where REACT completed the full mission with 95.6\% coverage while the baseline planner failed at 80.9\% coverage due to physical tether entanglement.
 
-Inspection of complex underwater structures with tethered underwater vehicles is often hindered by the risk of tether entanglement. We propose REACT (Real-time Entanglement-Aware Coverage Path Planning for Tethered Underwater Vehicles), a framework designed to overcome this limitation. REACT comprises a fast, geometry-based tether model using the signed distance field (SDF) map for accurate, real-time simulation of taut tether configurations around arbitrary structures. This model enables an efficient online replanning strategy within REACT that enforces a maximum tether length constraint, actively preventing entanglement. By integrating REACT into a coverage path planning framework, we achieve safe and optimal inspection paths, previously challenging due to tether constraints. To ensure safe and precise path following, a model predictive controller (MPC) is employed, accounting for system dynamics, while optimally following a desired trajectory. The complete REACT framework's efficacy is validated in a pipe inspection scenario, demonstrating safe, entanglement-free navigation and full coverage inspection.
+
+%Inspection of complex underwater structures with tethered underwater vehicles is often hindered by the risk of tether entanglement. We propose REACT (real-time entanglement-aware coverage path planning for tethered underwater vehicles), a framework designed to overcome this limitation. REACT comprises a fast geometry-based tether model using the signed distance field (SDF) map for accurate, real-time simulation of taut tether configurations around arbitrary structures in 3D. This model enables an efficient online replanning strategy, enforcing a maximum tether length constraint, thereby actively preventing entanglement. By integrating REACT into a coverage path planning framework, we achieve safe and optimal inspection paths, previously challenging due to tether constraints. What is more, the underlying model predictive controller (MPC) renders optimal trajectory following while accounting for system dynamics. The complete REACT framework's efficacy is validated in a pipe inspection scenario, demonstrating safe, entanglement-free navigation and full-coverage inspection.
 
 
 
@@ -240,9 +243,9 @@ Inspection of complex underwater structures with tethered underwater vehicles is
 \input{sections/abstract}
 \end{abstract}
 
-\begin{IEEEkeywords}
-coverage path planning, autonomous underwater vehicle (AUV), model predictive control, signed distance field (SDF), tether modelling, tether constraints.
-\end{IEEEkeywords}
+%\begin{IEEEkeywords}
+%coverage path planning, autonomous underwater vehicle (AUV), model predictive control, signed distance field (SDF), tether modelling, tether constraints.
+%\end{IEEEkeywords}
 
 \IEEEpeerreviewmaketitle
 
@@ -257,14 +260,17 @@ coverage path planning, autonomous underwater vehicle (AUV), model predictive co
 \input{sections/2-related_work} 
 \input{sections/3-method} % 1.5 pages
 \input{sections/4-simulations} % 
-\input{sections/5-conclusion} % 0.25 page
+\input{EA-Planner/sections/5-real_world_experiments} % 0.25 page
+\input{sections/6-conclusion} % 0.25 page
 
 %\appendix
 %\section{Projection and Back-Projection}
 %\input{sections/projection}
 
 \section*{Acknowledgment}
-This research receives support from Innovation Fund Denmark grant number 2040-00032B and EIVA a/s. The authors would also like to express their gratitude to Dr. Louis Petit from Université de Sherbrooke for his valuable insights on the ropeRRT path planner method and for open-sourcing his implementation using the OMPL library.
+This research was supported by Innovation Fund Denmark (Grant No. 2040-00032B) and EIVA a/s. The authors thank Nicolas Dahn, Dr. Leif Christensen, and Tom Slawik from DFKI for their assistance with the experiments, and Adis Hodzic from EIVA for his technical support with the ROV control software. We also thank Dr. Louis Petit for his insights on the ropeRRT planning method and for open-sourcing his OMPL-based implementation.
+
+
 \bibliographystyle{IEEEtran}
 % argument is your BibTeX string definitions and bibliography database(s)
 \bibliography{References.bib}
