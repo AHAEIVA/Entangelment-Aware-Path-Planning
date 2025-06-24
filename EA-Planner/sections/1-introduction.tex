@@ -9,7 +9,7 @@
 %
 %Most \acp{ROV} are tethered to ensure a continuous power supply during long-duration missions and to maintain reliable communication.
 
-Remotely operated vehicles \Acfp{ROV} have become essential for operations in complex, hazardous, and otherwise inaccessible environments. They facilitate a diverse range of demanding applications, including surveying, infrastructure inspection, and search and rescue missions, thus significantly expanding operational possibilities \cite{amer2023unav, amer2025modelling}. Most \acp{ROV} are tethered to a host platform to maintain reliable communication and ensure a continuous power supply during long-duration missions. However, this tethering infrastructure introduces operational challenges related to planning and control while posing the risk of being entangled with underwater objects such as flora, fauna, or structures under inspection.
+Operating in complex, hazardous, and otherwise inaccessible environments has made \acp{ROV} essential tools in modern exploration and intervention tasks. They facilitate a diverse range of demanding applications, including surveying, infrastructure inspection, and search and rescue missions, thus significantly expanding operational possibilities \cite{amer2023unav, amer2025modelling}. Most \acp{ROV} are tethered to a host platform to maintain reliable communication and ensure a continuous power supply during long-duration missions. However, this tethering infrastructure introduces operational challenges related to planning and control while posing the risk of being entangled with underwater objects such as flora, fauna, or structures under inspection.
 
 %
 % Introducing Problem Definition:
@@ -26,10 +26,10 @@ Numerous \ac{CPP} algorithms are proposed in the literature for inspection-relat
 In case of underwater inspection, entanglement occurs when the vehicle's movement is restricted due to interaction between the tether and objects in the environment. The tether can loop around obstacles, thereby limiting the vehicle's mobility and substantially reducing operational range in a worst-case scenario. Consequently, operators need to carry longer tethers to account for possible entanglements without a proper planner at hand.
 In this work, we propose the \ac{REACT} algorithm that fills this critical gap in underwater asset inspection. In essence, when integrated into the coverage path planning framework, \ac{REACT} renders entanglement-free paths, thus ensuring task completion without the need to carry additional tether lengths. Besides, the proposed planning framework reduces overall operational time by circumventing the post-completion detangling process, often required with traditional path-planning methods. The contributions of this work can be summarized as follows:
 \begin{itemize}
-\item A fast tether model that computes the tether configuration in real-time using \ac{SDF} data of arbitrary underwater structures.
-\item An efficient online replanning method \ac{REACT} that prevents entanglement by incorporating a tether-length constraint.
-%\item Integration of the proposed method into a \ac{CPP} framework with \ac{MPC} to enable optimal inspection while avoiding entanglement.
-\item \ac{REACT}'s integration with an off-the-shelf \ac{CPP} along with \ac{MPC}, rendering optimal trajectory following.
+\item A computationally efficient tether model that computes the tether configuration in real-time using \ac{SDF} data of arbitrary underwater structures.
+\item An efficient online replanning method that prevents entanglement by incorporating a tether-length constraint.
+
+\item Integration with an off-the-shelf \ac{CPP} along with \ac{MPC}, rendering optimal trajectory following.
 \item Demonstration of the framework in simulation and real-world tests, showcasing its ability to ensure safe and time-efficient inspection.
 \end{itemize}
 

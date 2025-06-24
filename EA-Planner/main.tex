@@ -9,7 +9,7 @@
 \IEEEoverridecommandlockouts                              % This command is only needed if 
                                                           % you want to use the \thanks command
 
-\overrideIEEEmargins                                      % Needed to meet printer requirements.
+%\overrideIEEEmargins                                      % Needed to meet printer requirements.
                                                           % you want to use the \thanks command
                                                           
 % \overrideIEEEmargins                                      % Needed to meet printer requirements.
@@ -173,12 +173,15 @@
 \begin{acronym}
     % \acro{CAMAP}{conflict-aware multi-agent planner}
 {
+\acroplural{ROV}[ROVs]{Remotely operated vehicles}
     \acro{MPC}{model predictive control}
     \acro{GP}{Gaussian process}
     \acro{AUV}{autonomous underwater vehicle}
     \acro{MHE}{moving horizon estimator}
     \acro{EKF}{extended kalman filter}
     \acro{ROV}{remotely operated vehicle}
+    \acro{ROVs}{remotely operated vehicle}
+
     \acro{TSP}{traveling salesman problem}
     \acro{IMU}{inertial measurement unit}
     \acro{DVL}{doppler velocity log}
@@ -225,7 +228,10 @@
 
 \maketitle
 \begin{abstract}
-Inspection of complex underwater structures with tethered underwater vehicles is often hindered by the risk of tether entanglement. We propose REACT (real-time entanglement-aware coverage path planning for tethered underwater vehicles), a framework designed to overcome this limitation. REACT comprises a fast geometry-based tether model using the signed distance field (SDF) map for accurate, real-time simulation of taut tether configurations around arbitrary structures in 3D. This model enables an efficient online replanning strategy, enforcing a maximum tether length constraint, thereby actively preventing entanglement. By integrating REACT into a coverage path planning framework, we achieve safe and optimal inspection paths, previously challenging due to tether constraints. What is more, the underlying model predictive controller (MPC) renders optimal trajectory following while accounting for system dynamics. The complete REACT framework's efficacy is validated in a pipe inspection scenario, demonstrating safe, entanglement-free navigation and full-coverage inspection. Simulation results show REACT achieves 99.91\% coverage while maintaining tether constraints, compared to conventional planners that violate length limits. Real-world experiments confirm these benefits, where REACT completed the full mission with 95.6\% coverage while the baseline planner failed at 80.9\% coverage due to physical tether entanglement.
+% Inspection of complex underwater structures with tethered underwater vehicles is often hindered by the risk of tether entanglement. We propose REACT (real-time entanglement-aware coverage path planning for tethered underwater vehicles), a framework designed to overcome this limitation. REACT comprises a fast geometry-based tether model using the signed distance field (SDF) map for accurate, real-time simulation of taut tether configurations around arbitrary structures in 3D. This model enables an efficient online replanning strategy, enforcing a maximum tether length constraint, thereby actively preventing entanglement. By integrating REACT into a coverage path planning framework, we achieve safe and optimal inspection paths, previously challenging due to tether constraints. What is more, the underlying model predictive controller (MPC) renders optimal trajectory following while accounting for system dynamics. The complete REACT framework's efficacy is validated in a pipe inspection scenario, demonstrating safe, entanglement-free navigation and full-coverage inspection. Simulation results show REACT achieves 99.91\% coverage while maintaining tether constraints, compared to conventional planners that violate length limits. Real-world experiments confirm these benefits, where REACT completed the full mission with 95.6\% coverage while the baseline planner failed at 80.9\% coverage due to physical tether entanglement.
+
+
+Inspection of complex underwater structures with tethered underwater vehicles is often hindered by the risk of tether entanglement. We propose REACT (real-time entanglement-aware coverage path planning for tethered underwater vehicles), a framework designed to overcome this limitation. REACT comprises a fast geometry-based tether model using the signed distance field (SDF) map for accurate, real-time simulation of taut tether configurations around arbitrary structures in 3D. This model enables an efficient online replanning strategy, by enforcing a maximum tether length constraint, thereby actively preventing entanglement. By integrating REACT into a coverage path planning framework, we achieve safe and optimal inspection paths, previously challenging due to tether constraints. What is more, the underlying model predictive controller (MPC) renders optimal trajectory following while accounting for system dynamics. The complete REACT framework's efficacy is validated in a pipe inspection scenario, demonstrating safe, entanglement-free navigation and full-coverage inspection. Simulation results show REACT achieves 99.91\% coverage while maintaining tether constraints and completing the total mission 20\% faster than conventional planners, despite longer inspection time due to proactive entanglement avoidance that eliminates extensive post-mission disentanglement. Real-world experiments confirm these benefits, where REACT completed the full mission with 95.6\% coverage while the baseline planner failed at 80.9\% coverage due to physical tether entanglement.
 
 
 %Inspection of complex underwater structures with tethered underwater vehicles is often hindered by the risk of tether entanglement. We propose REACT (real-time entanglement-aware coverage path planning for tethered underwater vehicles), a framework designed to overcome this limitation. REACT comprises a fast geometry-based tether model using the signed distance field (SDF) map for accurate, real-time simulation of taut tether configurations around arbitrary structures in 3D. This model enables an efficient online replanning strategy, enforcing a maximum tether length constraint, thereby actively preventing entanglement. By integrating REACT into a coverage path planning framework, we achieve safe and optimal inspection paths, previously challenging due to tether constraints. What is more, the underlying model predictive controller (MPC) renders optimal trajectory following while accounting for system dynamics. The complete REACT framework's efficacy is validated in a pipe inspection scenario, demonstrating safe, entanglement-free navigation and full-coverage inspection.
