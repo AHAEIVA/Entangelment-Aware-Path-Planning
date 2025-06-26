@@ -57,7 +57,7 @@ These results show that standard planners without tether constraints fail, even 
     \resizebox{0.8\columnwidth}{!}{%
     \begin{tabular}{|l|c|c|}
         \hline
-        \textbf{Planner} & \textbf{Mission Completion} & \textbf{Final Coverage (\%)} \\
+        \textbf{Planner} & \textbf{Inspection Completion} & \textbf{Final Coverage (\%)} \\
         \hline
         \ac{REACT} & Full & 95.6 \\
         CPP & Failed (Entangled) & 80.9  \\
@@ -74,14 +74,14 @@ These results show that standard planners without tether constraints fail, even 
     \begin{subfigure}[b]{0.48\linewidth}
         \centering
         \includegraphics[width=\linewidth]{EA-Planner/figures/dfki_coverage_comparison_plot.pdf}
-        \caption{ Coverage vs. Time for both planners.}
+        \caption{ Coverage vs. time for both planners.}
         \label{fig:traj_noreact}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\linewidth}
         \centering
         \includegraphics[width=\linewidth]{EA-Planner/figures/dfki_tether_length_vs_time.pdf}
-        \caption{Tether length vs time for both planner.}
+        \caption{Tether length vs time for both planners.}
         \label{fig:traj_react}
     \end{subfigure}
     \caption{Real-world ROV trajectories. Without \ac{REACT}, the mission fails due to tether entanglement. With \ac{REACT}, the ROV completes the mission successfully. At t = 86 s, the replanner is activated, allowing \ac{REACT} to disentangle the \ac{ROV} and continue the inspection. In contrast, at t = 124 s, the \ac{ROV} using the conventional \ac{CPP} becomes stuck due to the entangled tether.}
